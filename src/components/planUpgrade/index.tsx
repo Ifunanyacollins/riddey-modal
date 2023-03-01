@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "../modal";
 import Button from "../button";
 import { Badge } from "../icon";
 import styles from "./planUpgrade.module.css";
 import Check from "../icon/check";
+import ProgressBar from "../progressBar";
 
 const features = [
   {
@@ -22,6 +23,7 @@ const features = [
 ];
 
 function PlanUgrade() {
+  const [progressValue, setProgressValue] = useState<number>(1);
   return (
     <Modal width={320} open={true} closabel={false} footer={null}>
       <div className={styles["planUpgrade-container"]}>
@@ -46,7 +48,19 @@ function PlanUgrade() {
           </ul>
         </div>
         <h3 className={styles["planUpgrade-footer__text"]}>Current usage</h3>
-        <Button block>Add New Board</Button>
+        <h4
+          className={styles["tracker-text"]}
+        >{`${progressValue} out of 10 boards in use`}</h4>
+        <div className={styles["progress-container"]}>
+          <ProgressBar type="danger" value={(progressValue / 10) * 100} />
+        </div>
+        <Button
+          disabled={progressValue === 10}
+          block
+          onClick={() => setProgressValue((prev) => ++prev)}
+        >
+          Add New Board
+        </Button>
       </div>
     </Modal>
   );
@@ -71,7 +85,5 @@ const ListItem = ({
     </li>
   );
 };
-
-// 2 out of 10 boards in use
 
 export default PlanUgrade;

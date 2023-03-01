@@ -1,7 +1,7 @@
 import React from "react";
 import PlanUgrade from "./components/planUpgrade";
 
-function App(props) {
+function App() {
   return (
     <div>
       <PlanUgrade />
