@@ -10,19 +10,23 @@ function Modal({
   headerTitle,
   footer = true,
   children,
+  width,
 }: modalProps) {
+  const createWidthStyle = width ? { width } : {};
   if (!open) return null;
   return createPortal(
     <div className={styles.modal}>
-      <div className={styles["modal-content"]}>
+      <div style={createWidthStyle} className={styles["modal-content"]}>
         {closabel && (
           <div className={styles["modal-closable"]} onClick={onCancel}>
             &#x2613;
           </div>
         )}
-        <div className={styles["modal-header"]}>
-          <h4>{headerTitle}</h4>
-        </div>
+        {headerTitle && (
+          <div className={styles["modal-header"]}>
+            <h4>{headerTitle}</h4>
+          </div>
+        )}
         <div className={styles["modal-body"]}>{children}</div>
         {footer && (
           <div className={styles["modal-footer"]}>

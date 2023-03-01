@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "./components/button";
-import Modal from "./components/modal";
+import PlanUgrade from "./components/planUpgrade";
 
 function App(props) {
   return (
-    <div className="hello">
-      <Modal open={true}></Modal>
+    <div>
+      <PlanUgrade />
     </div>
   );
 }

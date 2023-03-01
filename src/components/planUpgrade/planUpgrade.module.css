@@ -1,0 +1,71 @@
+
+.planUpgrade-container {
+    padding: 10px;
+}
+.planUpgrade-title {
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #3C4043;
+margin-bottom: 0.4px;
+}
+.planUpgrade-subtitle {
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+text-align: center;
+color: #636669;
+margin-top: 10px;
+}
+
+.planUpgrade-header {
+    height: 74px;
+    width: 74px;
+    margin: auto;
+    border: 1px solid #D8D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planUpgrade-footer__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #242628;
+ }
+
+ .planUpgrade-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+ }
+.planUpgrade-list li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    color:  #8A8C8E;
+    gap: 8px;
+}
+strong {
+    font-weight: 700;
+    color: #3C4043;
+}
+
+
+.planUpgrade-list--icon {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #D8D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: #E26559;
+    flex-shrink: 0;
+
+}

@@ -1,5 +1,6 @@
 export type modalProps = {
-  open:boolean,
+  open:boolean
+  width?:string | number
   closabel?:boolean
   onCancel?: () => void
   headerTitle?:string
